@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "af6e5646-ea34-4837-90b4-7e1f4daf7b5a",
+		"name": "Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9071720"
+	},
+	"item": [
+		{
+			"name": "cadastrarProfessor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Paulo\",\n    \"idade\": 55,\n    \"matricula\": \"PM-0052\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cadastrarProfessor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cadastrarProfessor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarProfessores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/professores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"professores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarProfessores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/professor/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"professor",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletarProfessores",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/professorDeletar/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"professorDeletar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alterarProfessores",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"nome\": \"Paulo\",\n    \"idade\": 55,\n    \"matricula\": \"PM-0052\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/editarProfessor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"editarProfessor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
