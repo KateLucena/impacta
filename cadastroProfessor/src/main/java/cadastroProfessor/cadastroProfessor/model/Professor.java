@@ -17,6 +17,37 @@ public class Professor {
 	private int idade;
 	
 	private String matricula;
+	
+	private float qtdHorasTrabalhadas;
+	
+	private float valorHoraTrabalhada;
+	
+	private float salario;
+	
+
+	public float getQtdHorasTrabalhadas() {
+		return qtdHorasTrabalhadas;
+	}
+
+	public void setQtdHorasTrabalhadas(float qtdHorasTrabalhadas) {
+		this.qtdHorasTrabalhadas = qtdHorasTrabalhadas;
+	}
+
+	public float getValorHoraTrabalhada() {
+		return valorHoraTrabalhada;
+	}
+
+	public void setValorHoraTrabalhada(float valorHoraTrabalhada) {
+		this.valorHoraTrabalhada = valorHoraTrabalhada;
+	}
+
+	public float getSalario() {
+		return salario;
+	}
+
+	public void setSalario(float salario) {
+		this.salario = salario;
+	}
 
 	public String getMatricula() {
 		return matricula;
