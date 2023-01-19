@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "9125c290-8e29-4911-91b6-926f86d6748f",
+		"name": "CollectionTurma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9071720"
+	},
+	"item": [
+		{
+			"name": "cadastrarTurma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Turma COBOL\",\n    \"salaDeAula\": \"3C\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cadastrarTurma/52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cadastrarTurma",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarTurma",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/listarTurma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"listarTurma"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarTurma",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/turma/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"turma",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletarTurma",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/turmaDeletar/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"turmaDeletar",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alterarTurma",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"codigo\": 6,\n        \"nome\": \"Turma COBOL + GO (Alterada)\",\n        \"salaDeAula\": \"3C\",\n        \"professor\": {\n            \"codigo\": 52,\n            \"nome\": \"Pietro\",\n            \"idade\": 56,\n            \"matricula\": \"PM-052\",\n            \"qtdHorasTrabalhadas\": 128.0,\n            \"valorHoraTrabalhada\": 200.0,\n            \"salario\": 25600.0,\n            \"turma\": []\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/editarTurma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"editarTurma"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
