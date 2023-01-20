@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import cadastroProfessor.cadastroProfessor.model.Professor;
 import cadastroProfessor.cadastroProfessor.repository.ProfessorRepository;
 import cadastroProfessor.cadastroProfessor.service.ServiceProfessor;

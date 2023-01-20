@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Lista de Professores</title>
+	</head>
+	<body>
+
+	<h1>Tabela de Professores</h1>
+
+
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Código</th>
+				<th>Nome</th>
+				<th>Idade</th>
+				<th>Matricula</th>
+				<th>Valor da Hora</th>
+				<th>Quantidade de horas</th>
+				<th>Salario</th>
+				<th>Delete</th>
+			<tr>
+		</thead>
+		<tbody>
+			<tr th:each="professor : ${professores}">
+				<td><span th:text="${professor.codigo}" ></span></td>
+				<td><span th:text="${professor.nome}" ></span></td>
+				<td><span th:text="${professor.idade}" ></span></td>
+				<td><span th:text="${professor.matricula}" ></span></td>
+				<td><span th:text="${professor.valorHoraTrabalhada}" ></span></td>
+				<td><span th:text="${professor.qtdHorasTrabalhadas}" ></span></td>
+				<td><span th:text="${professor.salario}" ></span></td>
+				<td><span th:text="${professor.salario}" ></span></td>
+
+			<tr>
+
+	</table>	
+
+
+
+
+
+
+	</body>
+</html>
