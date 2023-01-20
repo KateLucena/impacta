@@ -29,7 +29,7 @@ public class ProfessorControllerMono {
 
 
 
-		modelAndViewProfessor.addObject("professor", professores);
+		modelAndViewProfessor.addObject("professores", professores);
 
 
 		return modelAndViewProfessor;
