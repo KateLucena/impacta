@@ -19,7 +19,8 @@
 				<th>Valor da Hora</th>
 				<th>Quantidade de horas</th>
 				<th>Salario</th>
-				<th>Delete</th>
+				<th>Deletar</th>
+
 			<tr>
 		</thead>
 		<tbody>
@@ -31,7 +32,7 @@
 				<td><span th:text="${professor.valorHoraTrabalhada}" ></span></td>
 				<td><span th:text="${professor.qtdHorasTrabalhadas}" ></span></td>
 				<td><span th:text="${professor.salario}" ></span></td>
-				<td><span th:text="${professor.salario}" ></span></td>
+				<td><a th:href="${(#mvc.url('PCM#deletarProfessor').arg(0, professor.codigo)).build()}">Deletar</a></td>
 
 			<tr>
 
