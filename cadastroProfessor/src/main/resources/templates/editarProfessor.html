@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<title>Alterar professor</title>
+	</head>
+
+<body>
+
+	<div th:each="professor : ${professor}">
+
+		<form method="post">
+		
+		<div>
+			Codigo: <input type="text" th:value="${professor.codigo}" name="codigo" readonly="readonly" />
+		</div>
+		
+		
+		<div>
+			Nome: <input type="text" th:value="${professor.nome}" name="nome"/>
+		</div>
+
+		<div>
+			Idade: <input type="text" th:value="${professor.idade}" name="idade"/>
+		</div>
+		
+		<div>
+			Matricula: <input type="text" th:value="${professor.matricula}" name="matricula"/>
+		</div>
+		
+		<div>
+			Quantidade de Horas: <input type="text" th:value="${professor.qtdHorasTrabalhadas}" name="qtdHorasTrabalhadas"/>
+		</div>
+
+		<div>
+			Valor da Hora: <input type="text" th:value="${professor.valorHoraTrabalhada}" name="valorHoraTrabalhada"/>
+		</div>
+
+
+		<button type="submit">Alterar</button>
+
+	</form>
+
+
+		</form>
+
+
+
+	</div>
+
+</body>
+</html>

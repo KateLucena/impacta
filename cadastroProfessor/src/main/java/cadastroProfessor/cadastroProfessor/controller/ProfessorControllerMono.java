@@ -2,6 +2,7 @@ package cadastroProfessor.cadastroProfessor.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -63,6 +64,28 @@ public class ProfessorControllerMono {
 
 		professorRepository.delete(professor);
 
+		return "redirect:/listaDeProfessores";
+	}
+	
+	@RequestMapping(value ="/{codigo}", method = RequestMethod.GET)
+	public ModelAndView editarProfessorMetodo(@PathVariable("codigo") long codigo) {
+		Professor professor = professorRepository.findById(codigo);
+		ModelAndView modelAndViewProfessor = new ModelAndView("editarProfessor");
+		modelAndViewProfessor.addObject("professor", professor);
+		
+		return modelAndViewProfessor;
+			
+	}
+	
+	@RequestMapping(value ="/{codigo}", method = RequestMethod.POST)
+	public String editarProfessorPost(Professor professor) {
+		
+		ServiceProfessor serviceProfessor = new ServiceProfessor();
+		
+		professor.setSalario(serviceProfessor.calcularSalario(professor.getQtdHorasTrabalhadas(), professor.getValorHoraTrabalhada()));
+		
+		professorRepository.save(professor);
+		
 		return "redirect:/listaDeProfessores";
 	}
 
