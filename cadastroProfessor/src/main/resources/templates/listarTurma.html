@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Lista de Professores</title>
+		<title>Lista de Turmas</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	</head>
 	<body>
@@ -32,38 +32,25 @@
 			</form>
 		</li>
 	</nav>
-
+	
 <div sec:authorize="hasRole('ROLE_USER')">
 <div class="centralizarObjeto">
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Codigo</th>
-				<th>Nome</th>
-				<th>Idade</th>
-				<th>Matricula</th>
-				<th>Valor da Hora</th>
-				<th>Quantidade de horas</th>
-				<th>Salario</th>
-				<th>Deletar</th>
-				<th>Alterar</th>
-				<th>Adicionar Turma</th>
+				<th>Nome Turma</th>
+				<th>Sala de Aula</th>
+				<th>Nome do Professor</th>
 
 			<tr>
 		</thead>
 		<tbody>
-			<tr th:each="professor : ${professores}">
-				<td><span th:text="${professor.codigo}" ></span></td>
-				<td><span th:text="${professor.nome}" ></span></td>
-				<td><span th:text="${professor.idade}" ></span></td>
-				<td><span th:text="${professor.matricula}" ></span></td>
-				<td><span th:text="${professor.valorHoraTrabalhada}" ></span></td>
-				<td><span th:text="${professor.qtdHorasTrabalhadas}" ></span></td>
-				<td><span th:text="${professor.salario}" ></span></td>
-				<td><a th:href="${(#mvc.url('PCM#deletarProfessor').arg(0, professor.codigo)).build()}">Deletar</a></td>
-				<td><a th:href="${(#mvc.url('PCM#editarProfessorMetodo').arg(0, professor.codigo)).build()}">Alterar</a></td>
-				<td><a th:href="${(#mvc.url('TCM#cadastrarTurmaMetodo').arg(0, professor.codigo)).build()}">Adicionar Turma</a></td>
-
+			<tr th:each="turma : ${turmas}">
+				<td><span th:text="${turma.codigo}" ></span></td>
+				<td><span th:text="${turma.nome}" ></span></td>
+				<td><span th:text="${turma.salaDeAula}" ></span></td>
+				<td><span th:text="${turma.professor.nome}" ></span></td>
 			<tr>
 
 	</table>	
