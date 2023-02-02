@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<h2>Login</h2>
 	<div class="centralizarObjeto">
 		<form th:action="@{/login}" method="post">
 			<div>
@@ -20,8 +21,7 @@
 
 			<div>
 				<p>Senha</p>
-				<input id="login_password" type="password" name="password"
-					placeholder="Usuario">
+				<input id="login_password" type="password" name="password" placeholder="Senha">
 			</div>
 
 			<div th:if="${param.error}">Usuario ou senha Invalidos!!</div>
@@ -31,25 +31,65 @@
 			<div>
 				<input type="submit" value="Entrar">
 
-
 			</div>
-
-
-
 
 		</form>
 	</div>
+
 </body>
 
 <style>
 .centralizarObjeto {
-	width: 1000px;
-	margin-left: 700px;
-	margin-top: 50px
+	width: 500px;
+	margin: 200px auto 200px auto;
 }
 
-input {
+input, p {
 	width: 50%;
+	margin: 10px 10px;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 100px;
 }
 </style>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href=
+"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" 
+              rel="stylesheet" />
+    </head>
+  
+    <body>
+        <div class="h-screen flex flex-col 
+                    items-center justify-center">
+            <p class="text-green-700 text-xl mb-3">
+              Welcome
+            </p>
+  
+	<form th:action="@{/login}" method="post">
+                <input aria-label="Enter your user"
+                	   name="username" 
+                       type="text" placeholder="Usuario" 
+                       class="text-sm text-gray-base w-full 
+                              mr-3 py-5 px-4 h-2 border 
+                              border-gray-200 rounded mb-2" />
+                <input aria-label="Enter your password" 
+                       type="password" name="password"
+                       placeholder="Senha"
+                       class="text-sm text-gray-base w-full mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded mb-2" />
+  
+                <button type="submit"
+                        class="bg-green-400 w-full mt-4">
+                    Login
+                </button>
+            </form>
+        </div>
+    </body>
 </html>
